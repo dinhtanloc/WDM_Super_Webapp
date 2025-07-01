@@ -17,3 +17,5 @@ test_images/
 .env.gateway
 app_api.yaml
 serene-craft-464519-j1-963d43d7e20e.json
+
+scripts/
