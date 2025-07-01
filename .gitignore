@@ -8,5 +8,8 @@ wheels/
 
 # Virtual environments
 .venv
+
 # env variables
 .env
+.env.gateway
+app_api.yaml
