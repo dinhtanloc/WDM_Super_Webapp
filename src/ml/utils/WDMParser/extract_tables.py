@@ -20,7 +20,7 @@ from .llm_feat import get_is_has_header, get_is_new_section_context
 
 load_dotenv()
 # Use relative path that works on all machines
-IMAGE_OUTPUT_DIR = "test_images"
+IMAGE_OUTPUT_DIR = "C:/Users/Admin/Data/MultimodalRag_Web_app/src/ml/tests/test_images"
 
 
 class WDMTable(TypedDict):
@@ -1289,6 +1289,7 @@ def full_pipeline(
                 if not os.path.exists(d):
                     if debug:
                         logger.error(f"File not found: {d}")
+                        raise FileNotFoundError(f"File not found: {d}")
                     continue
                 if debug:
                     logger.info(f"Processing document {doc_idx + 1}/{len(doc)}: {get_pdf_name(d)}")

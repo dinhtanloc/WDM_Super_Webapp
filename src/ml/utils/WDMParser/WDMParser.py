@@ -11,7 +11,7 @@ from loguru import logger
 from markdown import markdown
 
 from .extract_tables import WDMMergedTable, WDMTable, full_pipeline, get_tables_from_pdf
-from ..setting import IGNORE_TABLES
+from .setting import IGNORE_TABLES
 
 def convert_markdown_to_df(markdown_text: str) -> pd.DataFrame:
     try:

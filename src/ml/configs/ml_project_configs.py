@@ -18,5 +18,4 @@ class Settings:
         self.OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
         self.ENVIRONMENT = os.getenv("ENVIRONMENT", "development")
 
-# Singleton instance
 settings = Settings()
