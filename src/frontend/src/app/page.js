@@ -126,9 +126,8 @@ export default function ChatbotPage() {
     : 'Chưa có nội dung RAG.';
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col" style={{ width: '100%', height:'920px'}}>
       <header className="h-16 bg-red-600 text-white flex items-center px-4">
-        <h1 className="text-lg font-semibold">Chatbot App</h1>
       </header>
       <main className="flex flex-1 overflow-hidden">
         <LeftSideBar

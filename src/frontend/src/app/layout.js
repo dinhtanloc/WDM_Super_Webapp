@@ -9,7 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-red-50">
+      <body className="bg-red-50" style={{ height: '1100px', width: '100%' }}>
         <header className="bg-red-600 text-white p-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold">My App</h1>
           <Link href="/auth/login">

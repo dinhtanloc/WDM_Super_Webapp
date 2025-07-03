@@ -49,6 +49,8 @@
       { id: 'e1-3', source: 'doc1', target: 'doc3', animated: true, style: { stroke: '#ff6b6b' } },
       { id: 'e1-rag', source: 'doc1', target: 'rag', animated: true, style: { stroke: '#96ceb4' } },
     ]);
+    const [selectedPdfUrl, setSelectedPdfUrl] = useState('/pdf/2c98e99a08ec5392d50e60370d871319.pdf');
+
 
     return isOpen ? (
       <aside className={`w-164 bg-white p-4 border-l ${isOpen ? 'animate-fadeIn slide-in-right' : 'animate-fadeOut slide-out-right'}`}>
@@ -85,11 +87,25 @@
                 .filter(doc => doc.type === 'text')
                 .map((doc) => (
                   <div key={doc.id} className="mb-2">
-                    <p className="flex items-center gap-2">
+                    <button
+                      onClick={() => setSelectedPdfUrl(doc.source)}
+                      className="flex items-center gap-2 text-left w-full px-2 py-1 bg-gray-100 hover:bg-gray-200 rounded"
+                    >
                       <FiFileText /> {doc.source}
-                    </p>
+                    </button>
                   </div>
                 ))}
+
+              {selectedPdfUrl && (
+                <div className="mt-4">
+                  <iframe
+                    src={selectedPdfUrl}
+                    width="100%"
+                    height="400px"
+                    className="border rounded"
+                  />
+                </div>
+              )}
             </div>
           )}
           {activeTab === 2 && (
